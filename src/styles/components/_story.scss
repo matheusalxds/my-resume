@@ -1,0 +1,61 @@
+.c-story {
+  margin: 0 auto;
+  box-shadow: $box-shadow;
+  background-color: rgba($color-white, .6);
+  padding: $base-padding;
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+
+  @include mq($until: tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    shape-outside: circle(50% at 50% 50%);
+    margin-right: 25px;
+
+
+
+    img {
+      height: 100%;
+      transform-origin: 0 10%;
+      transform: translateX(-4rem) scale(1.4);
+      backface-visibility: hidden;
+      transition: all .5s;
+
+
+    }
+
+    figcaption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      text-align: center;
+      opacity: 0;
+      transition: all .5s;
+    }
+  }
+
+  &:hover figcaption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover img {
+    transform-origin: 30% 10%;
+    transform: translateX(-2rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}

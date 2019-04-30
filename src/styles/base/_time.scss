@@ -1,0 +1,18 @@
+time {
+  color: lighten($color-text-secondary, 15%);
+
+  + time {
+    position: relative;
+    padding-left: 40px;
+    padding-bottom: 40px;
+
+    &::before {
+      content: 'até';
+      position: absolute;
+      top: 1px;
+      left: 10px;
+      color: $color-text-primary;
+      font-size: .85rem;
+    }
+  }
+}

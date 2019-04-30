@@ -1,0 +1,13 @@
+.c-wrapper {
+  width: 100%;
+  max-width: $max-content-width;
+  margin: 2rem auto;
+
+  @include mq($until: desktop) {
+    padding: 0 $base-padding * 2;
+  }
+
+  @include mq($until: tablet) {
+    padding: 0 $base-padding;
+  }
+}

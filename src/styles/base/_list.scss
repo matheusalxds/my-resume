@@ -1,0 +1,42 @@
+ul {
+  list-style: none;
+
+  li {
+    line-height: $line-height/1.2;
+    position: relative;
+    padding: 0 $base-padding;
+    color: lighten($color-text-secondary, 15%);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: lighten($color-primary, 25%);
+      transition: all .4s ease-in-out;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background-color: lighten($color-primary, 25%);
+      transition: all .4s ease-in-out;
+    }
+
+    &:hover {
+      &:hover::after {
+        width: 50%;
+      }
+
+      &:hover::before {
+        width: 50%;
+      }
+    }
+  }
+}
