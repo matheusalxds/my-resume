@@ -22,6 +22,10 @@
     shape-outside: circle(50% at 50% 50%);
     margin-right: 25px;
 
+    @include mq($until: tablet) {
+      margin-right: 0;
+      margin-bottom: $base-padding * 1.5;
+    }
 
 
     img {
