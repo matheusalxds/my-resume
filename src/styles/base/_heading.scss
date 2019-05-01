@@ -13,6 +13,15 @@ h1, h2, h3, h4, h5, h6 {
     background-color: $color-primary;
     height: 1px;
     width: 125px;
+
+    @include mq($until: tablet) {
+      bottom: -8px;
+    }
+  }
+
+  @include mq($until: tablet) {
+    margin-bottom: 15px;
+    line-height: $line-height/2;
   }
 }
 
