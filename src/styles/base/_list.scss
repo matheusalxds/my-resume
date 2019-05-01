@@ -5,7 +5,13 @@ ul {
     line-height: $line-height/1.2;
     position: relative;
     padding: 0 $base-padding;
+    margin: 0 $base-padding;
     color: lighten($color-text-secondary, 15%);
+
+    @include mq($until: tablet) {
+      padding: 0 $base-padding / 1.5;
+      margin: 0 $base-padding / 1.5;
+    }
 
     &::after {
       content: '';

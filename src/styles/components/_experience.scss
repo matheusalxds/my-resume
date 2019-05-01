@@ -18,6 +18,19 @@
       border-radius: $border-radius;
       margin-top: $base-padding;
 
+      header {
+        span {
+          margin-bottom: 20px;
+          display: block;
+          text-align: right;
+
+          @include mq($until: tablet) {
+            padding-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
       &:not(:last-child) {
         &:nth-child(even) {
           position: relative;
