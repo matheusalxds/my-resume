@@ -1,6 +1,7 @@
 # My-Resume
 
-Project created to expose my professional experience.
+Project created to expose my professional experience and can be accessed by
+url: https://matheusalxds.github.io
 
 ### Installation
 
