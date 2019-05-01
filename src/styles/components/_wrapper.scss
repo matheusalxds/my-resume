@@ -9,5 +9,6 @@
 
   @include mq($until: tablet) {
     padding: 0 $base-padding;
+    margin: $base-padding 0 0 0;
   }
 }

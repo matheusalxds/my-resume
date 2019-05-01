@@ -1,4 +1,10 @@
 .c-header {
+
+  @include mq($until: tablet) {
+    h1 {
+      margin-bottom: $base-padding * 2;
+    }
+  }
   div {
     display: flex;
     justify-content: center;
