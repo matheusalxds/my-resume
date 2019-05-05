@@ -1,6 +1,6 @@
 {
   "name": "my-resume",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Project created to expose my professional experience.",
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",

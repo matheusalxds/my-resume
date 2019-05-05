@@ -17,6 +17,11 @@
       height: 100%;
       border-radius: $border-radius;
       margin-top: $base-padding;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        background-color: darken($color-white, 5%);
+      }
 
       header {
         span {
@@ -31,57 +36,9 @@
         }
       }
 
-      &:not(:last-child) {
-        &:nth-child(even) {
-          position: relative;
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 30px;
-            left: -34px;
-            z-index: 1;
-
-            width: 34px;
-            height: 40px;
-            background-color: $color-white;
-            border-top: solid 1px $border-color;
-            border-bottom: solid 1px $border-color;
-
-            @include mq($until: desktop) {
-              display: none;
-            }
-          }
-        }
-      }
-
-      &:not(:last-child) {
-        &:nth-child(odd) {
-          position: relative;
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 250px;
-            right: -34px;
-            z-index: 1;
-
-            width: 34px;
-            height: 40px;
-            background-color: $color-white;
-            border-top: solid 1px $border-color;
-            border-bottom: solid 1px $border-color;
-
-            @include mq($until: desktop) {
-              display: none;
-            }
-          }
-        }
-      }
-
       @include mq($from: desktop) {
         &:nth-child(2) {
-            margin-top: $base-padding * 15;
+          margin-top: $base-padding * 15;
         }
 
         &:nth-child(3),
@@ -104,22 +61,69 @@
   &__article {
     &--1 {
       animation: wobble 3s ease-in-out;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 250px;
+        left: 622px;
+        z-index: 1;
+
+        animation: width0To100 1s forwards 3s;
+
+        @include mq($until: desktop) {
+          display: none;
+        }
+      }
     }
 
     &--2 {
-      animation: fadeOut 2s backwards 2s;
+      animation: fadeOut 2s backwards 4s;
+
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 30px;
+        right: 622px;
+        z-index: 1;
+
+        animation: width0To100 2s forwards 6s;
+
+        @include mq($until: desktop) {
+          display: none;
+        }
+      }
+
     }
 
     &--3 {
-      animation: fadeOut 2s backwards 4s;
+      animation: fadeOut 2s backwards 8s;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 250px;
+        left: 622px;
+        z-index: 1;
+
+        animation: width0To100 2s forwards 10s;
+
+        @include mq($until: desktop) {
+          display: none;
+        }
+      }
     }
 
     &--4 {
-      animation: fadeOut 2s backwards 6s;
+      animation: fadeOut 3s backwards 12s;
     }
 
     &--5 {
-      animation: fadeOut 2s backwards 8s;
+      animation: fadeOut 3s backwards 24s;
     }
   }
 }
