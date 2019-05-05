@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: 8px;
     left: 0;
-    background-color: $color-primary;
+    background-color: lighten($color-heading-secondary, 50%);
     height: 1px;
     width: 125px;
 
