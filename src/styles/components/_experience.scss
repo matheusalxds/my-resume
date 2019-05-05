@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @include mq($until: tablet) {
+    @include mq($until: desktop) {
       flex-direction: column;
     }
 
@@ -20,7 +20,7 @@
       transition: all .3s ease-in-out;
 
       &:hover {
-        background-color: darken($color-white, 5%);
+        background-color: lighten($color-primary, 35%);
       }
 
       header {
@@ -73,7 +73,10 @@
         animation: width0To100 1s forwards 3s;
 
         @include mq($until: desktop) {
-          display: none;
+          animation: width0To100Down 1s forwards 3s;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }
@@ -93,7 +96,10 @@
         animation: width0To100 2s forwards 6s;
 
         @include mq($until: desktop) {
-          display: none;
+          animation: width0To100Down 2s forwards 6s;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
 
@@ -113,7 +119,10 @@
         animation: width0To100 2s forwards 10s;
 
         @include mq($until: desktop) {
-          display: none;
+          animation: width0To100Down 2s forwards 10s;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
     }

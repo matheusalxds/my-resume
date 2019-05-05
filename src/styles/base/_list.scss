@@ -1,16 +1,14 @@
 ul {
-  list-style: none;
+  list-style-type: circle;
 
   li {
     line-height: $line-height/1.2;
     position: relative;
-    padding: 0 $base-padding;
-    margin: 0 $base-padding;
+    margin: 0 $base-padding * 3;
     color: lighten($color-text-secondary, 15%);
 
     @include mq($until: tablet) {
-      padding: 0 $base-padding / 1.5;
-      margin: 0 $base-padding / 1.5;
+      margin: 0 $base-padding;
     }
 
     &::after {
