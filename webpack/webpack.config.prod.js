@@ -17,6 +17,10 @@ module.exports = merge(common, {
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
+    new Webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new Webpack.optimize.ModuleConcatenationPlugin(),
     new MiniCssExtractPlugin({
       filename: 'bundle.css'

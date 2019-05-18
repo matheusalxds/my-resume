@@ -59,6 +59,10 @@
   }
 
   &__article {
+    &--disabled {
+      opacity: 0;
+    }
+
     &--1 {
       animation: wobble 3s ease-in-out;
       position: relative;
@@ -70,10 +74,10 @@
         left: 622px;
         z-index: 1;
 
-        animation: width0To100 1s forwards 3s;
+        animation: width0To100 2s forwards;
 
         @include mq($until: desktop) {
-          animation: width0To100Down 1s forwards 3s;
+          animation: width0To100Down 1s forwards;
           top: 100%;
           left: 50%;
           transform: translateX(-50%);
@@ -82,7 +86,7 @@
     }
 
     &--2 {
-      animation: fadeOut 2s backwards 4s;
+      animation: fadeOut 2s backwards;
 
       position: relative;
 
@@ -93,10 +97,10 @@
         right: 622px;
         z-index: 1;
 
-        animation: width0To100 2s forwards 6s;
+        animation: width0To100 2s forwards;
 
         @include mq($until: desktop) {
-          animation: width0To100Down 2s forwards 6s;
+          animation: width0To100Down 1s forwards;
           top: 100%;
           left: 50%;
           transform: translateX(-50%);
@@ -106,7 +110,7 @@
     }
 
     &--3 {
-      animation: fadeOut 2s backwards 8s;
+      animation: fadeOut 2s backwards;
       position: relative;
 
       &::after {
@@ -116,10 +120,10 @@
         left: 622px;
         z-index: 1;
 
-        animation: width0To100 2s forwards 10s;
+        animation: width0To100 2s forwards;
 
         @include mq($until: desktop) {
-          animation: width0To100Down 2s forwards 10s;
+          animation: width0To100Down 2s forwards;
           top: 100%;
           left: 50%;
           transform: translateX(-50%);
@@ -128,7 +132,7 @@
     }
 
     &--4 {
-      animation: fadeOut 3s backwards 12s;
+      animation: fadeOut 3s backwards;
     }
 
     &--5 {
