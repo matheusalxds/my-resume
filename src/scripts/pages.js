@@ -11,44 +11,50 @@
     var check3 = 880;
     var check4 = 1500;
 
-    // mobile
-    if($width >= 485) {
-      check1 = 585;
-      check2 = 135;
-      check3 = 205;
-      check4 = 295;
+    if ($width >= 980) {
+      check1 = 0;
+      check2 = 375;
+      check3 = 950;
+      check4 = 1200;
+    } else {
+      //tablet
+      if ($width >= 740) {
+        check1 = 310;
+        check2 = 930;
+        check3 = 1400;
+        check4 = 1800;
+      } else {
+        // mobile
+        check1 = 585;
+        check2 = 1400;
+        check3 = 2100;
+        check4 = 2975;
+      }
     }
 
-    //table
-    if($width >= 740) {
-      check1 = 310;
-      check2 = 930;
-      check3 = 1530;
-      check4 = 2200;
-    }
 
     if (window.scrollY >= check1) {
-      $experiencie01.removeClass('c-experiences__article--disabled');
+      $experiencie01.addClass('c-experiences__article--1-animate');
     } else {
-      $experiencie01.addClass('c-experiences__article--disabled');
+      $experiencie01.removeClass('c-experiences__article--1-animate');
     }
 
     if (window.scrollY > check2) {
-      $experiencie02.removeClass('c-experiences__article--disabled');
+      $experiencie02.addClass('c-experiences__article--2-animate');
     } else {
-      $experiencie02.addClass('c-experiences__article--disabled');
+      $experiencie02.removeClass('c-experiences__article--2-animate');
     }
 
     if (window.scrollY > check3) {
-      $experiencie03.removeClass('c-experiences__article--disabled');
+      $experiencie03.addClass('c-experiences__article--3-animate');
     } else {
-      $experiencie03.addClass('c-experiences__article--disabled');
+      $experiencie03.removeClass('c-experiences__article--3-animate');
     }
 
     if (window.scrollY > check4) {
-      $experiencie04.removeClass('c-experiences__article--disabled');
+      $experiencie04.addClass('c-experiences__article--4-animate');
     } else {
-      $experiencie04.addClass('c-experiences__article--disabled');
+      $experiencie04.removeClass('c-experiences__article--4-animate');
     }
   }
 
