@@ -11,7 +11,6 @@
   var $width = $(window).width();
 
   function checkPosition() {
-    console.log('-->', window.scrollY);
     if ($width >= 980) {
       check1 = 0;
       check2 = 375;
@@ -25,7 +24,6 @@
         check3 = 1400;
         check4 = 1800;
       } else {
-        console.log('ta aqui');
         // mobile
         check1 = 900;
         check2 = 1800;
