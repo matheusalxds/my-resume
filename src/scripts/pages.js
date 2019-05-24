@@ -3,14 +3,15 @@
   var $experiencie02 = $('.c-experiences__article--2');
   var $experiencie03 = $('.c-experiences__article--3');
   var $experiencie04 = $('.c-experiences__article--4');
+
+  var check1 = 0;
+  var check2 = 375;
+  var check3 = 880;
+  var check4 = 1500;
   var $width = $(window).width();
 
   function checkPosition() {
-    var check1 = 0;
-    var check2 = 375;
-    var check3 = 880;
-    var check4 = 1500;
-
+    console.log('-->', window.scrollY);
     if ($width >= 980) {
       check1 = 0;
       check2 = 375;
@@ -24,11 +25,12 @@
         check3 = 1400;
         check4 = 1800;
       } else {
+        console.log('ta aqui');
         // mobile
-        check1 = 585;
-        check2 = 1400;
-        check3 = 2100;
-        check4 = 2975;
+        check1 = 900;
+        check2 = 1800;
+        check3 = 2600;
+        check4 = 3600;
       }
     }
 
