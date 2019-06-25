@@ -32,26 +32,25 @@
       }
     }
 
-
     if (window.scrollY >= check1) {
       $experiencie01.addClass('c-experiences__article--1-animate');
     } else {
       $experiencie01.removeClass('c-experiences__article--1-animate');
     }
 
-    if (window.scrollY > check2) {
+    if (window.scrollY >= check2) {
       $experiencie02.addClass('c-experiences__article--2-animate');
     } else {
       $experiencie02.removeClass('c-experiences__article--2-animate');
     }
 
-    if (window.scrollY > check3) {
+    if (window.scrollY >= check3) {
       $experiencie03.addClass('c-experiences__article--3-animate');
     } else {
       $experiencie03.removeClass('c-experiences__article--3-animate');
     }
 
-    if (window.scrollY > check4) {
+    if (window.scrollY >= check4) {
       $experiencie04.addClass('c-experiences__article--4-animate');
     } else {
       $experiencie04.removeClass('c-experiences__article--4-animate');
