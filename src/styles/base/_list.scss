@@ -1,46 +1,26 @@
 ul {
-  list-style-type: circle;
+  list-style: none;
 
   li {
     line-height: $line-height/1.2;
     position: relative;
-    margin: 0 $base-padding * 3;
-    color: lighten($color-text-secondary, 15%);
+    margin: 0 $base-padding * 2.75;
+    color: $color-white;
 
     @include mq($until: tablet) {
       margin: 0 $base-padding;
     }
 
     &::after {
-      content: '';
+      content: "";
+      color: #006b6e;
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: lighten($color-primary, 25%);
-      transition: all .4s ease-in-out;
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0;
-      height: 2px;
-      background-color: lighten($color-primary, 25%);
-      transition: all .4s ease-in-out;
-    }
-
-    &:hover {
-      &:hover::after {
-        width: 50%;
-      }
-
-      &:hover::before {
-        width: 50%;
-      }
+      top: 50%;
+      left: -10px;
+      transform: translate(-50%, -20%);
+      background-color: $color-details;
+      width: 5px;
+      height: 5px;
     }
   }
 }

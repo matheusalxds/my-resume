@@ -1,8 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,600,700');
 
-$font-text: 'Source Sans Pro', 'Helvetica', sans-serif;
-$font-heading: 'EB Garamond', serif;
+//$font-text: 'Source Sans Pro', 'Helvetica Nueu', sans-serif;
+$font-text: 'Haas Grotestk Regular', 'Helvetica', sans-serif;
+//$font-heading: 'EB Garamond', serif;
+$font-heading: 'Source Sans Pro', 'Helvetica Nueu', sans-serif;
 
 $font-size: 16px;
 $line-height: 2em;
+
+
+@font-face {
+  font-family:"Haas Grotestk Regular";
+  src: url("../fonts/NHaasGroteskTXPro-55Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Haas Grotestk Italic";
+  src: url("../fonts/NHaasGroteskTXPro-56It.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Haas Grotestk Bold";
+  src: url("../fonts/NHaasGroteskTXPro-75Bd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:"Haas Grotestk Bold Italic";
+  src: url("../fonts/NHaasGroteskTXPro-76BdIt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

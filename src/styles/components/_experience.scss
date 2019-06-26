@@ -14,17 +14,18 @@
 
     article {
       flex: 0 0 calc(50% - 1rem);
-      background-color: $color-white;
+      background-image: linear-gradient(to top right, $color-background, $color-background-secondary);
       box-shadow: $box-shadow;
       border: solid 1px $border-color;
       padding: $base-padding * 2 $base-padding * 3;
       height: 100%;
       border-radius: $border-radius;
       margin-top: $base-padding;
-      transition: background-color .3s ease-in-out;
+      transition: background-color .3s ease-in-out, background-position .3s ease-in-out;
+      background-size: 200% auto;
 
       &:hover {
-        background-color: lighten($color-primary, 35%);
+        background-position: right bottom;
       }
 
       header {
@@ -35,6 +36,14 @@
 
           @include mq($until: tablet) {
             padding-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+
+        h3 {
+          margin-bottom: 0;
+
+          @include mq($until: tablet) {
             margin-bottom: 10px;
           }
         }

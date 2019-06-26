@@ -1,5 +1,5 @@
 time {
-  color: lighten($color-text-secondary, 15%);
+  color: $color-details;
 
   + time {
     position: relative;
@@ -11,7 +11,7 @@ time {
       position: absolute;
       top: 3px;
       left: 10px;
-      color: $color-text-primary;
+      color: $color-white;
       font-size: .85rem;
     }
   }

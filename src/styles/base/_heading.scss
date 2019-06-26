@@ -1,18 +1,19 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading;
-  color: $color-heading-secondary;
+  color: $color-white;
   line-height: $line-height;
   position: relative;
   margin-bottom: 30px;
+  letter-spacing: 2.5px;
 
   &::after {
     content: '';
     position: absolute;
     bottom: 8px;
-    left: 0;
-    background-color: lighten($color-heading-secondary, 50%);
-    height: 1px;
-    width: 125px;
+    left: 2px;
+    background-color: $color-white;
+    height: 4px;
+    width: 110px;
 
     @include mq($until: tablet) {
       bottom: -8px;

@@ -1,14 +1,15 @@
 .c-story {
   margin: 0 auto;
   box-shadow: $box-shadow;
-  background-color: rgba($color-white, .6);
+  background: linear-gradient(to bottom right, $color-background, $color-background-secondary);
   padding: $base-padding;
   border: solid 1px $border-color;
   border-radius: $border-radius;
   transition: all .3s linear;
+  background-size: 200% auto;
 
   &:hover {
-    background-color: lighten($color-primary, 35%);
+    background-position: right bottom;
   }
 
   @include mq($until: tablet) {
@@ -19,6 +20,7 @@
 
   p {
     text-indent: 0;
+    color: $color-white;
   }
 
   &__shape {
@@ -30,6 +32,7 @@
     border-radius: 50%;
     shape-outside: circle(50% at 50% 50%);
     margin-right: 25px;
+    border: solid 10px $color-details;
 
     @include mq($until: tablet) {
       margin-right: 0;
@@ -40,11 +43,9 @@
     img {
       height: 100%;
       transform-origin: 0 10%;
-      transform: translateX(-4rem) scale(1.4);
+      transform: translateX(-.5rem) translateY(-2rem) scale(1.4);
       backface-visibility: hidden;
       transition: all .5s;
-
-
     }
 
     figcaption {
@@ -67,8 +68,9 @@
   }
 
   &:hover img {
-    transform-origin: 30% 10%;
-    transform: translateX(-2rem) scale(1);
+    transform-origin: 0 10%;
+    transform: translateX(.5rem) translateY(-2rem) scale(1.3);
     filter: blur(3px) brightness(80%);
+
   }
 }
